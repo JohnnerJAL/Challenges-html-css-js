@@ -1,0 +1,49 @@
+:root {
+  --primary-color: rgb(29, 26, 26);
+  --secondary-color: rgb(18, 146, 163);
+}
+
+header {
+  min-height: 15vh;
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+}
+
+nav {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+
+nav div {
+  display: flex;
+  align-items: center;
+  font-size: 2.4rem;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  padding: 10px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+main {
+  min-height: 80vh;
+  overflow-y: scroll;
+}
+
+footer {
+  height: 5vh;
+  background-color: var(--primary-color);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
