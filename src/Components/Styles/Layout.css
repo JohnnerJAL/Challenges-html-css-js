@@ -10,28 +10,33 @@ header {
   justify-content: center;
 }
 
-nav {
+header nav {
   width: 80%;
   display: flex;
   justify-content: space-between;
   color: white;
 }
 
-nav div {
+header nav div {
   display: flex;
   align-items: center;
   font-size: 2.4rem;
 }
 
-nav ul {
+header nav ul {
   display: flex;
 }
 
-nav ul li {
+header nav ul li {
   padding: 10px;
   list-style: none;
   display: flex;
   align-items: center;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
 }
 
 main {

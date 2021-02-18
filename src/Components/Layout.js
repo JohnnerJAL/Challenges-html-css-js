@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "./Styles/Layout.css";
 
@@ -11,7 +12,7 @@ function Layout(props) {
             JAL
           </div>
           <ul>
-            <li>Home</li>
+            <li><Link to="/">Home</Link></li>
             <li>Challenges</li>
           </ul>
         </nav>
