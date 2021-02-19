@@ -1,14 +1,30 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import {ContextSearch} from "../Components/LayoutContainer";
 
 import "./Styles/Home.css";
 
-function Home() {
-  
-  let challenges = [];
+function Home(props) {
+  const { challenge } = useContext(ContextSearch);
 
+  let challenges = [];
   for (let i=3; i<=27; i++) {
     challenges.push(i);
+  }
+  
+  const anchors = document.querySelectorAll(".container-challenges a");
+
+  if (challenge) {
+    anchors.forEach(element => {
+      element.style.display = "none"
+      if (element.innerText.toLowerCase().includes(challenge.toLowerCase())) {
+        element.style.display = "unset";
+      }
+    });
+  } else {
+    anchors.forEach(element => {
+      element.style.display = "unset";
+    });
   }
   
   return (

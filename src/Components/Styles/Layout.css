@@ -39,6 +39,10 @@ header nav ul li a {
   text-decoration: none;
 }
 
+header nav ul li form label input {
+  margin-left: 5px;
+}
+
 main {
   min-height: 80vh;
   overflow-y: scroll;

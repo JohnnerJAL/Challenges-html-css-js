@@ -14,12 +14,27 @@ function Layout(props) {
           <ul>
             <li><Link to="/">Home</Link></li>
             <li>Challenges</li>
+            <li>
+              <form onSubmit={props.handleSubmit}>
+                <label htmlFor="search-challenges">
+                  Search
+                  <input
+                    key="hola"
+                    id="search-challenges"
+                    type="text"
+                    name="challenge"
+                    onChange={props.handleChange}
+                    value={props.search}
+                  />
+                </label>
+              </form>
+            </li>
           </ul>
         </nav>
       </header>
 
       <main>
-        {props.children}
+          {props.children}
       </main>
       
       <footer>
