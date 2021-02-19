@@ -13,18 +13,18 @@ function Layout(props) {
           </div>
           <ul>
             <li><Link to="/">Home</Link></li>
-            <li>Challenges</li>
+            <li><a href="https://johnner.netlify.app/">About me</a></li>
             <li>
               <form onSubmit={props.handleSubmit}>
                 <label htmlFor="search-challenges">
-                  Search
+                  <span>Search</span>
                   <input
-                    key="hola"
                     id="search-challenges"
                     type="text"
                     name="challenge"
                     onChange={props.handleChange}
                     value={props.search}
+                    placeholder="Challenge"
                   />
                 </label>
               </form>

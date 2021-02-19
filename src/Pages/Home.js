@@ -1,17 +1,12 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import {ContextSearch} from "../Components/LayoutContainer";
+import { ContextSearch } from "../Components/LayoutContainer";
 
 import "./Styles/Home.css";
 
 function Home(props) {
   const { challenge } = useContext(ContextSearch);
 
-  let challenges = [];
-  for (let i=3; i<=27; i++) {
-    challenges.push(i);
-  }
-  
   const anchors = document.querySelectorAll(".container-challenges a");
 
   if (challenge) {
@@ -26,7 +21,12 @@ function Home(props) {
       element.style.display = "unset";
     });
   }
-  
+
+  let challenges = [];
+  for (let i=3; i<=27; i++) {
+    challenges.push(i);
+  }
+
   return (
     <section>
       <div className="container-challenges">
